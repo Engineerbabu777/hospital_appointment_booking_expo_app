@@ -6,7 +6,8 @@ import {
   SignedOut,
 } from "@clerk/clerk-expo";
 import { tokenCache } from "@/cache";
-import HomeScreen from "./screens/HomeScreen";
+import TabNavigation from "./navigations/TabNavigation";
+import { StatusBar } from "react-native";
 
 export default function Index() {
   return (
@@ -16,7 +17,10 @@ export default function Index() {
     >
       <ClerkLoaded>
         <SignedIn>
-          <HomeScreen />
+          <StatusBar hidden/>
+          {/* <NavigationContainer> */}
+            <TabNavigation />
+          {/* </NavigationContainer> */}
         </SignedIn>
         <SignedOut>
           <LoginScreen />
