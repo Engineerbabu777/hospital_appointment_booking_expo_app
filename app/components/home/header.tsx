@@ -11,13 +11,13 @@ const Header = () => {
     }
     return (
         <View style={{
-            paddingHorizontal:15,
-            display:"flex",
+            paddingHorizontal: 15,
+            display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
             flexDirection: "row",
         }}>
-            <View style={{ display: "flex", flexDirection: "row", gap:10, alignItems: "center" }}>
+            <View style={{ display: "flex", flexDirection: "row", gap: 10, alignItems: "center" }}>
                 <View >
                     <Image
                         source={{ uri: user?.imageUrl }}
@@ -29,10 +29,12 @@ const Header = () => {
                 <View >
                     <Text style={{
                         fontSize: 18,
+                        fontFamily: "Outfit"
                     }}>Hello, 👋</Text>
                     <Text style={{
                         fontWeight: "bold",
                         fontSize: 20,
+                        fontFamily: "Outfit"
                     }}>{user?.firstName}</Text>
                 </View>
             </View>
