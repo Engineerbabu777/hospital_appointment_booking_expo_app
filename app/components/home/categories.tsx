@@ -54,6 +54,7 @@ export default function Categories() {
          
                 renderItem={({ item }: { item: any }) => (
                     <View style={{
+                        alignItems: "center",
 
                     }}>
                         <Pressable
@@ -74,7 +75,13 @@ export default function Categories() {
                                     height: 60,
                                 }}
                             />
+                           
                         </Pressable>
+                        <Text style={{
+                                color: Colors.Primary,
+                                fontSize: 14,
+                                fontWeight: "500"
+                            }}>{item?.Name}</Text>
 
                     </View>
                 )}
