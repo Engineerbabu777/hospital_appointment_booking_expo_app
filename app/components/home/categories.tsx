@@ -3,6 +3,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { getCategories } from '@/services/global.api';
+import Colors from '@/app/constants/Colors';
 
 export default function Categories() {
 
@@ -24,8 +25,29 @@ export default function Categories() {
       };
       
   return (
-    <View>
-      <Text>Categories</Text>
+    <View style={{
+        padding:15
+    }}>
+        <View style={{
+            backgroundColor:"#f2f2f2",
+            padding:10,
+            borderRadius:10,
+            marginBottom:10,
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center"
+        }}>
+            <Text
+            style={{
+                fontSize:20,
+                fontWeight:"bold"
+            }}
+            >Doctor Speciality</Text>
+            <Text style={{
+                fontSize:16,
+                color:Colors.Primary
+            }}>View all</Text>
+        </View>
     </View>
   )
 }
